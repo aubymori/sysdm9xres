@@ -1,0 +1,63 @@
+#include <windows.h>
+#include "resource.h"
+
+DOCK_ICON  ICON  "dock.ico"
+
+DLG_HWPROFILES DIALOG 32, 10, 256, 218
+STYLE WS_CAPTION | WS_SYSMENU | WS_VISIBLE | DS_3DLOOK | DS_MODALFRAME
+CAPTION "Hardware Profiles"
+FONT 8, "MS Shell Dlg"
+BEGIN
+	ICON       DOCK_ICON, 1736, 10,10,18,20
+	LTEXT      "You can create hardware profiles to select different hardware configurations at startup.",
+		       1737, 44,10,197,18
+	LTEXT      "Most computers do not need separate hardware profiles. For more information, see Help.",
+	           1739, 44,34,197,22
+
+	CONTROL    "", 1306, "ListBox", LBS_NOTIFY | WS_BORDER | WS_VSCROLL | WS_TABSTOP | WS_GROUP, 10,64,235,70
+
+	PUSHBUTTON "&Copy..."   1307, 10,134,76,15
+	PUSHBUTTON "&Rename..." 1308, 89,134,76,15
+	PUSHBUTTON "&Delete"    1309, 169,134,76,15
+END
+
+DLG_DEVMGR DIALOG 32, 10, 256, 218
+STYLE WS_CAPTION | WS_SYSMENU | WS_VISIBLE | DS_3DLOOK | DS_MODALFRAME
+CAPTION "Device Manager"
+FONT 8, "MS Shell Dlg"
+BEGIN
+	AUTORADIOBUTTON "View devices by &type", 1373
+					10,10,80,10, WS_TABSTOP
+	AUTORADIOBUTTON "View devices by &connection", 1375
+					110,10,111,10, WS_TABSTOP
+
+	CONTROL         "", 1100, "SysTreeView32", WS_BORDER | WS_GROUP | WS_TABSTOP, 10,24,235,164
+
+	PUSHBUTTON      "P&roperties" 1103, 10,193,56,14
+	PUSHBUTTON      "Re&fresh"    1500, 70,193,56,14
+	PUSHBUTTON      "R&emove"     1618, 130,193,56,14
+	PUSHBUTTON      "Pri&nt..."   1501, 190,193,56,14
+END
+
+STRINGTABLE
+BEGIN
+	IDS_RAM_9X       "%u.%uMB RAM"
+	IDS_ORIG_CONFIG  "Original Configuration"
+END
+
+#include <ntverp.h>
+#define VER_FILETYPE                    VFT_APP
+#define VER_FILESUBTYPE                 VFT_UNKNOWN
+#undef  VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR             "aubymori"
+#undef  VER_PRODUCTNAME_STR
+#define VER_PRODUCTNAME_STR             "System Properties LARP"
+#define VER_FILEDESCRIPTION_STR         "System Properties LARP Win9x Resources"
+#define VER_INTERNALNAME_STR            "sysdm9xres"
+#define VER_LEGALCOPYRIGHT_YEARS        "2025"
+#define VER_ORIGINALFILENAME_STR        "sysdm9xres.dll"
+#undef  VER_PRODUCTVERSION
+#define VER_PRODUCTVERSION              1,2,0,0
+#undef  VER_PRODUCTVERSION_STR
+#define VER_PRODUCTVERSION_STR          "1.2.0"
+#include <common.ver>

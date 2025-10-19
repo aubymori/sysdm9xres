@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sysdm9xres", "sysdm9xres.vcxproj", "{CD2795B2-5E68-402D-B2BF-9306A6648549}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD2795B2-5E68-402D-B2BF-9306A6648549}.Release|x86.ActiveCfg = Release|Win32
+		{CD2795B2-5E68-402D-B2BF-9306A6648549}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F677952-1B07-47B6-B7B9-797AF83396ED}
+	EndGlobalSection
+EndGlobal
