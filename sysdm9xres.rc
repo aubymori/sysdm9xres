@@ -50,6 +50,7 @@ END
 #define VER_FILESUBTYPE                 VFT_UNKNOWN
 #undef  VER_COMPANYNAME_STR
 #define VER_COMPANYNAME_STR             "aubymori"
+#define VER_LEGALCOPYRIGHT_STR          "Copyright (c) aubymori 2025"
 #undef  VER_PRODUCTNAME_STR
 #define VER_PRODUCTNAME_STR             "System Properties LARP"
 #define VER_FILEDESCRIPTION_STR         "System Properties LARP Win9x Resources"
